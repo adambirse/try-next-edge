@@ -3,7 +3,7 @@ import {auth, get} from '@upstash/redis';
 
 export async function middleware(req: NextRequest, ev: NextFetchEvent) {
    const country = req.geo.country || 'GB';
-   auth('UPSTASH_REDIS_REST_URL', 'UPSTASH_REDIS_REST_TOKEN');
+   auth(process.env.UPSTASH_REDIS_REST_URL, process.env.UPSTASH_REDIS_REST_TOKEN);
    let result = await get(country);
    let greeting = result.data || 'Hello World!'
    return new Response(greeting)
