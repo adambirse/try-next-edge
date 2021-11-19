@@ -2,12 +2,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type Data = {
-  name: string
+  greeting: string
 }
 
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: 'John Doe' })
+  const languageSpecifiGreeting = req.query.greeting;
+  res.status(200).json({ greeting: `${languageSpecifiGreeting} John Doe` })
 }
