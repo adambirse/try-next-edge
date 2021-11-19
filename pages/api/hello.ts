@@ -10,5 +10,5 @@ export default function handler(
   res: NextApiResponse<Data>
 ) {
   const languageSpecifiGreeting = req.query.greeting;
-  res.status(200).json({ greeting: `${languageSpecifiGreeting} Drunk Andy` })
+  res.status(200).json({ greeting: `${languageSpecifiGreeting} Steve and Andy` })
 }
