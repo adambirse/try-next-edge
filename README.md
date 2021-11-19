@@ -1,6 +1,6 @@
 # NextJS Edge with Upstash middleware
 
-
+Deployed to vercel - https://try-next-edge-adambirse.vercel.app/api/hello
 
 ## Acknowledgements
 
